@@ -33,7 +33,7 @@ export const Header = () => {
     <HeaderEl>
       <Container>
         <Wrapper>
-          <Title onClick={cleanUp}>Where is the world?</Title>
+          <Title to="/" onClick={cleanUp}>Where is the world?</Title>
           <ThemeSwitcher />
         </Wrapper>
       </Container>
