@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {configureStore} from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
 
 import * as api from './config';
 import { themeReducer } from './features/theme/theme-slice';
@@ -15,7 +16,7 @@ export const store = configureStore({
     details: detailsReducer,
   },
   devTools: true,
-  middleware: (getDefaultMiddlware) => getDefaultMiddlware({
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
     thunk: {
       extraArgument: {
         client: axios,
@@ -25,3 +26,7 @@ export const store = configureStore({
     serializableCheck: false,
   })
 });
+
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch;
+export const useAppDispatch: () => AppDispatch = useDispatch
