@@ -20,7 +20,7 @@ const CountryList = () => {
       <List>
         {countries.map((c) => {
           const countryInfo: CountryInfo = {
-            img: c.flag.png,
+            img: c.flags.png,
             name: c.name,
             info: [
               {

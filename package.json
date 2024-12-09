@@ -2,6 +2,7 @@
   "name": "countries-flags",
   "version": "0.1.0",
   "private": true,
+  "author": "Anton Lazurko <a.lazurko.al@gmail.com>",
   "dependencies": {
     "@reduxjs/toolkit": "^2.4.0",
     "axios": "^1.7.9",
